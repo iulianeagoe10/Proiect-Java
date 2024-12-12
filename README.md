@@ -23,3 +23,34 @@ Prezența fișierelor de testare (de exemplu, UserRepositoryTests.java) indică 
 Configurare:
 
 Fișierul application.properties permite configurarea diferitelor setări ale aplicației, cum ar fi conexiunile la baze de date, porturile de server și alte proprietăți specifice mediului.
+
+API:
+GET /users
+Descriere: Preia și afișează o listă cu toți utilizatorii.
+Parametri: niciunul.
+
+GET /users/new
+Descriere: Afișează un formular pentru a crea un utilizator nou.
+Parametri: niciunul.
+
+POST / users / save
+
+Descriere: salvează un utilizator nou în baza de date.
+Parametri: Acceptă un obiect User cu următoarele câmpuri:
+{
+
+" email:"string",
+"password:" string",
+"firstName":"string"
+"lastName":"string"
+}
+
+GET /users/edit/{id}
+Descriere: Afișează un formular pentru a edita un utilizator existent identificat prin ID.
+Parametri:
+Variabila cale {id}: ID-ul utilizatorului care urmează să fie editat.
+
+GET /users/delete/{id}
+Descriere: Șterge un utilizator identificat prin ID.
+Parametri:
+Variabila cale {id}: ID-ul utilizatorului care urmează să fie șters.
